@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkout | MyStore</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="data.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="logo">🛒 MyStore</div>
+    <nav class="nav-links" id="navMenu">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+      <a href="checkout.html" class="active">Checkout</a>
+    </nav>
+   <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+  </header>
+
+  <!-- MAIN CHECKOUT -->
+  <main class="checkout-page">
+    <h2>Complete Your Order</h2>
+
+    <div class="checkout-container">
+      <!-- BILLING FORM -->
+      <section class="checkout-form">
+        <h3>Billing Details</h3>
+        <form onsubmit="handleCheckout(event)">
+          <label for="name">Full Name</label>
+          <input id="name" type="text" required>
+
+          <label for="email">Email</label>
+          <input id="email" type="email" required>
+
+          <label for="address">Shipping Address</label>
+          <input id="address" type="text" required>
+
+          <label for="phone"> Phone Number</label>
+          <input id="phone" type="text" required>
+          <button type="button" id="pay-now" class="btn-primary">Pay Now</button>
+        </form>
+      </section>
+
+      <!-- ORDER SUMMARY -->
+      <section class="order-summary">
+        <h3>Order Summary</h3>
+        <div id="checkout-items" class="checkout-items"></div>
+        <p class="total">Total: $<span id="checkout-total">0</span></p>
+      </section>
+    </div>
+  </main>
+
+<!-- ================= CART PROMO ================= -->
+<section class="cart-promo">
+  <h2>🛍️ Don't Miss Out!</h2>
+  <p>Check out our recommended products and complete your purchase with exclusive deals.</p>
+  <a href="products.html"><button class="btn-primary">Browse More Products</button></a>
+</section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <p>&copy; 2025 MyStore. All rights reserved.</p>
+    <div class="socials">
+      <a href="#">Facebook</a> | 
+      <a href="#">Instagram</a> | 
+      <a href="#">Twitter</a>
+    </div>
+  </footer>
+
+<script src="https://js.paystack.co/v1/inline.js"></script>
+
+</body>
+</html>

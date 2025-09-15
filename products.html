@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products | MyStore</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="data.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+ <!-- HEADER -->
+  <header>
+    <div class="logo">🛒 MyStore</div>
+    <nav class="nav-links" id="navMenu">
+      <a href="index.html">Home</a>
+      <a href="products.html" class="active">Products</a>
+      <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+      <a href="checkout.html">Checkout</a>
+    </nav>
+   <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+  </header>
+
+<div class="layout">
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <h3>Categories</h3>
+    <ul id="sidebar-categories">
+      <!-- JS will inject categories -->
+    </ul>
+  </aside>
+
+  <!-- MAIN PRODUCTS -->
+  <main class="products-main">
+    <h2>Shop Our Collection</h2>
+    <p>Browse through our wide selection of high-quality products, carefully curated to suit your lifestyle.</p>
+    <div id="product-list" class="grid">
+      <!-- JS will inject products dynamically -->
+    </div>
+  </main>
+</div>
+
+<!-- ================= PROMO ================= -->
+  <section class="promo">
+    <h2>🔥 Limited Time Offer</h2>
+    <p>Get up to <strong>50% OFF</strong> on selected items!</p>
+  </section>
+
+  <!-- ================= NEWSLETTER ================= -->
+  <section class="newsletter">
+  <h2>Stay Updated</h2>
+  <p>Subscribe to our newsletter and get exclusive offers straight to your inbox.</p>
+  <form>
+    <input type="email" placeholder="Enter your email" required>
+    <button type="submit" class="btn-newsletter">Subscribe</button>
+  </form>
+</section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <p>&copy; 2025 MyStore. All rights reserved.</p>
+    <div class="socials">
+      <a href="#">Facebook</a> | 
+      <a href="#">Instagram</a> | 
+      <a href="#">Twitter</a>
+    </div>
+  </footer>
+</body>
+</html>
